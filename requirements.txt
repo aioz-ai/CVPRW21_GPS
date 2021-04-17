@@ -1,0 +1,15 @@
+certifi==2020.12.5
+chardet==4.0.0
+idna==2.10
+numpy==1.19.5
+Pillow==8.2.0
+pytorch-ignite==0.1.2
+PyYAML==5.4.1
+requests==2.25.1
+six==1.15.0
+torch==1.4.0+cu92
+torchvision==0.5.0+cu92
+tqdm==4.60.0
+urllib3==1.26.4
+wrapt==1.12.1
+yacs==0.1.8

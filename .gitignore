@@ -1,0 +1,10 @@
+env/
+models/
+dataset/
+pretrained/
+.idea/
+*.pyc
+*.swp
+*.pkl
+*.sh
+*.pth
