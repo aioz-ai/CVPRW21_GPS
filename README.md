@@ -1,7 +1,7 @@
 # CVPRW2021 - Graph-based Person Signature for Person Re-Identifications (GPS)
 AIOZ - CVPRW 2021: "Graph-based Person Signature for Person Re-Identifications (GPS)"
 
-This repository is the implementation of `GPS` for Person Re-Identifications task. Our model achieved **87.8**, **78.7** on mAP and **95.2**, **88.2** on R@1 over Market1501 and DukeMTMC-ReID datasets, respectively. For the detail, please refer to [link](https://arxiv.org/pdf/2104.06770.pdf).
+This repository is the implementation of `GPS` for Person Re-Identifications task. Our model achieved **87.8**, **78.7** on mean Average Precision (mAP) and **95.2**, **88.2** on Cumulative Matching Characteristic (CMC) R-1 over Market1501 and DukeMTMC-ReID datasets, respectively. For the detail, please refer to [link](https://arxiv.org/pdf/2104.06770.pdf).
 
 This repository is based on and inspired by @Hao Luo's [work](https://github.com/michuanhaohao/reid-strong-baseline). We sincerely thank for their sharing of the codes.
 ### Summary
@@ -97,7 +97,7 @@ The training scores will be printed every epoch.
 ### Testing
 In this repo, we include the pre-trained weight of `GPS_market1501` and `GPS_dukemtmc` models.
 
-For `GPS_market1501` pretrained model. Please download the [link](https://vision.aioz.io:123/f/c0153d23a43145baba23/?dl=1) and move to `pretrained/` directory. The trained `GPS_market1501` model can be tested in Market1501 test split via: 
+For `GPS_market1501` pretrained model. Please download the [link](https://vision.aioz.io/f/c0153d23a43145baba23/?dl=1) and move to `pretrained/` directory. The trained `GPS_market1501` model can be tested in Market1501 test split via: 
 ```
 $ python test.py --config_file configs/market1501_gps_softmax_triplet_center.yml MODEL.PRETRAIN_CHOICE "('self')" TEST.WEIGHT "('pretrained/GPS_market1501.pth')"
 ```
