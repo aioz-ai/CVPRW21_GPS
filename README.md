@@ -1,5 +1,4 @@
-# CVPRW2021 - Graph-based Person Signature for Person Re-Identifications (GPS)
-AIOZ - CVPRW 2021: "Graph-based Person Signature for Person Re-Identifications (GPS)"
+# Graph-based Person Signature for Person Re-Identifications (GPS)
 
 This repository is the implementation of `GPS` for Person Re-Identifications task. Our model achieved **87.8**, **78.7** on mean Average Precision (mAP) and **95.2**, **88.2** on Cumulative Matching Characteristic (CMC) R-1 over Market1501 and DukeMTMC-ReID datasets, respectively. For the detail, please refer to [link](https://arxiv.org/pdf/2104.06770.pdf).
 
