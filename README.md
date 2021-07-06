@@ -111,7 +111,14 @@ $ python test.py --config_file configs/dukemtmc_gps_softmax_triplet_center.yml M
 If you use this code as part of any published research, we'd really appreciate it if you could cite the following paper:
 
 ```
-updating
+@InProceedings{Nguyen_2021_CVPR,
+    author    = {Nguyen, Binh X. and Nguyen, Binh D. and Do, Tuong and Tjiputra, Erman and Tran, Quang D. and Nguyen, Anh},
+    title     = {Graph-Based Person Signature for Person Re-Identifications},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2021},
+    pages     = {3492-3501}
+}
 ```
 
 ### License
