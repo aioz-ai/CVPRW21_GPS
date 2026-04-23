@@ -281,6 +281,9 @@ class PersonGraph(nn.Module):
 
     def load_param(self, trained_path):
         param_dict = torch.load(trained_path)
+        if isinstance(param_dict, torch.nn.Module):
+            if hasattr(param_dict, "state_dict"):
+                param_dict = param_dict.state_dict()
         for k, v in param_dict.items():
             if 'classifier' in k:
                 continue
