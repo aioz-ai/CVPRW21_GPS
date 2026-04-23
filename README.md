@@ -42,7 +42,7 @@ pip install -r requirements.txt
 This directory is constructed as follow:   
 ```
 |---dataset   
-|---|---market1501   
+|---|---market1501_gps_release   
 |---|---|---bounding_box_test
 |---|---|---bounding_box_train
 |---|---|---gt_bbox
@@ -69,7 +69,7 @@ This directory is constructed as follow:
 This directory is constructed as follow:   
 ```
 |---dataset   
-|---|---dukemtmc
+|---|---dukemtmc_gps_release
 |---|---|---bounding_box_test
 |---|---|---bounding_box_train
 |---|---|---query
