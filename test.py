@@ -43,7 +43,7 @@ def main():
     if output_dir and not os.path.exists(output_dir):
         mkdir(output_dir)
 
-    logger = setup_logger("reid_baseline", output_dir, 0)
+    logger = setup_logger("reid_gps", output_dir, 0, filename="test_log.txt")
     logger.info("Using {} GPUS".format(num_gpus))
     logger.info(args)
 

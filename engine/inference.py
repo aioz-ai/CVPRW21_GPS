@@ -56,7 +56,7 @@ def inference(
 ):
     device = cfg.MODEL.DEVICE
 
-    logger = logging.getLogger("reid_baseline.inference")
+    logger = logging.getLogger("reid_gps.inference")
     logger.info("Enter inferencing")
     if cfg.TEST.RE_RANKING == 'no':
         print("Create evaluator")

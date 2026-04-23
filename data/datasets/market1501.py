@@ -27,7 +27,7 @@ class Market1501(BaseImageDataset):
     # identities: 1501 (+1 for background)
     # images: 12936 (train) + 3368 (query) + 15913 (gallery)
     """
-    dataset_dir = 'market1501'
+    dataset_dir = 'market1501_gps_release'
 
     def __init__(self, root='/home/haoluo/data', verbose=True, **kwargs):
         super(Market1501, self).__init__()

@@ -28,7 +28,7 @@ class DukeMTMCreID(BaseImageDataset):
     # images:16522 (train) + 2228 (query) + 17661 (gallery)
     # cameras: 8
     """
-    dataset_dir = 'dukemtmc'
+    dataset_dir = 'dukemtmc_gps_release'
 
     def __init__(self, root='/home/haoluo/data', verbose=True, **kwargs):
         super(DukeMTMCreID, self).__init__()

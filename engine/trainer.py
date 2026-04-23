@@ -159,7 +159,7 @@ def do_train(
     device = cfg.MODEL.DEVICE
     epochs = cfg.SOLVER.MAX_EPOCHS
 
-    logger = logging.getLogger("reid_baseline.train")
+    logger = logging.getLogger("reid_gps.train")
     logger.info("Start training")
     trainer = create_supervised_trainer(model, optimizer, loss_fn, device=device)
     evaluator = create_supervised_evaluator(model, metrics={'r1_mAP': R1_mAP(num_query, max_rank=50, feat_norm=cfg.TEST.FEAT_NORM)}, device=device)
@@ -239,7 +239,7 @@ def do_train_with_center(
     device = cfg.MODEL.DEVICE
     epochs = cfg.SOLVER.MAX_EPOCHS
 
-    logger = logging.getLogger("reid_baseline.train")
+    logger = logging.getLogger("reid_gps.train")
     logger.info("Start training")
     trainer = create_supervised_trainer_with_center(model, center_criterion, optimizer, optimizer_center, loss_fn, att_loss_fn, cfg.SOLVER.CENTER_LOSS_WEIGHT, cfg.SOLVER.ATT_WEIGHT, device=device)
     evaluator = create_supervised_evaluator(model, metrics={'r1_mAP': R1_mAP(num_query, max_rank=50, feat_norm=cfg.TEST.FEAT_NORM)}, device=device)
