@@ -31,11 +31,13 @@ pip install -r requirements.txt
 
 **Market1501**
 
-* The Market1501 original dataset should be downloaded via [link](https://www.kaggle.com/pengcw1/market-1501/data).
+* The Market1501 original dataset can be downloaded via [link](https://www.kaggle.com/pengcw1/market-1501/data).
 
-* The Market1501 attributes and body-part masks should be downloaded via [link](https://vision.aioz.io/f/7e70595885de49b7add6/?dl=1).
+* The Market1501 attributes and body-part masks can be downloaded via [link](https://huggingface.co/datasets/aiozai/CVPRW2021_GPS/resolve/main/market1501_gps_att_release.zip).
 
-* The downloaded files should be extracted to `dataset/market1501/` directory.
+* Additionally, a full version including all the above data is available [here](https://huggingface.co/datasets/aiozai/CVPRW2021_GPS/resolve/main/market1501_gps_full_release.zip). Downloading this version is sufficient.
+
+* Extract the downloaded files to the `dataset/market1501_gps_release/` directory.
 
 This directory is constructed as follow:   
 ```
@@ -56,11 +58,13 @@ This directory is constructed as follow:
 
 **DukeMTMC-ReID**
 
-* The DukeMTMC-ReID original dataset should be downloaded via [link](https://drive.google.com/u/0/uc?export=download&confirm=_Npo&id=1jjE85dRCMOgRtvJ5RQV9-Afs-2_5dY3O).
+* The DukeMTMC-ReID original dataset can be downloaded via [link](https://drive.google.com/u/0/uc?export=download&confirm=_Npo&id=1jjE85dRCMOgRtvJ5RQV9-Afs-2_5dY3O).
 
-* The DukeMTMC-ReID attributes and body-part masks should be downloaded via [link](https://vision.aioz.io/f/5943c5d37fe44da4ba38/?dl=1).
+* The DukeMTMC-ReID attributes and body-part masks can be downloaded via [link](https://huggingface.co/datasets/aiozai/CVPRW2021_GPS/resolve/main/dukemtmc_gps_att_release.zip).
 
-* The downloaded file should be extracted to `dataset/dukemtmc/` directory.
+* Additionally, a full version including all the above data is available [here](https://huggingface.co/datasets/aiozai/CVPRW2021_GPS/resolve/main/dukemtmc_gps_full_release.zip). Downloading this version is sufficient.
+
+* Extract the downloaded files to the `dataset/dukemtmc_gps_release/` directory.
 
 This directory is constructed as follow:   
 ```
@@ -96,11 +100,11 @@ The training scores will be printed every epoch.
 ### Testing
 In this repo, we include the pre-trained weight of `GPS_market1501` and `GPS_dukemtmc` models.
 
-For `GPS_market1501` pretrained model. Please download the [link](https://vision.aioz.io/f/c0153d23a43145baba23/?dl=1) and move to `pretrained/` directory. The trained `GPS_market1501` model can be tested in Market1501 test split via: 
+For `GPS_market1501` pretrained model. Please download the [link](https://huggingface.co/aiozai/CVPRW2021_GPS/resolve/main/GPS_market1501.pth) and move to `pretrained/` directory. The trained `GPS_market1501` model can be tested in Market1501 test split via: 
 ```
 $ python test.py --config_file configs/market1501_gps_softmax_triplet_center.yml MODEL.PRETRAIN_CHOICE "('self')" TEST.WEIGHT "('pretrained/GPS_market1501.pth')"
 ```
-For `GPS_dukemtmc` pretrained model. Please download the [link](https://vision.aioz.io/f/86ba3bcc5f834302bee7/?dl=1) and move to `pretrained`. The trained `GPS_dukemtmc` model can be tested in DukeMTMC-ReID test split via:
+For `GPS_dukemtmc` pretrained model. Please download the [link](https://huggingface.co/aiozai/CVPRW2021_GPS/resolve/main/GPS_dukemtmc.pth) and move to `pretrained`. The trained `GPS_dukemtmc` model can be tested in DukeMTMC-ReID test split via:
 ```
 $ python test.py --config_file configs/dukemtmc_gps_softmax_triplet_center.yml MODEL.PRETRAIN_CHOICE "('self')" TEST.WEIGHT "('pretrained/GPS_dukemtmc.pth')"
 ```
